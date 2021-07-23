@@ -16,7 +16,8 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+//The nested function can access the variable internal because it is within myFunction() making it apart of the function as well as able to use the same variables.
+//Another way to think of it is that myFunction() is the parent and nestedFunction() is the child, and because of this nestedFunction() inhereits the use of myFunction() variables.
 
 
 
@@ -28,9 +29,16 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  let count = [];
+  for(let i = num; i > 0; i--){
+    count.push(i);
+  }
+  num = 0;
+  for(let j = 0; j < count.length; j++){
+    num += count[j];
+  }
+    return num;
   }
  
 
